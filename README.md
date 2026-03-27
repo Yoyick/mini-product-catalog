@@ -1,11 +1,11 @@
-# Social Deal Demo
+# Mini Product Catalog
 
 Een lichtgewicht Symfony + Vue demo project dat een productcatalogus ontsluit via een API. Dit project is opgezet als een **monorepo** met een gescheiden backend en frontend.
 
 ## 📂 Projectstructuur
 
 ```
-/socialdeal-demo
+/mini-product-catalog
 ├── api          # Symfony backend
 ├── app          # Vue 3 frontend (Vite)
 └── README.md    # Deze file

@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 class ProductController extends AbstractController
 {
@@ -18,6 +19,7 @@ class ProductController extends AbstractController
         
         $products = $productService->getAllProducts($minPrice);
 
-        return $this->json($products);
+        return $this->json($products); 
+
     }
 }

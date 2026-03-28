@@ -24,8 +24,9 @@ class ProductService
 
         return array_map(fn($p) => new ProductDto(
             $p->getId(),
-            $p->getName(),
+            $p->getName(),            
             '€ ' . number_format($p->getPrice(), 2, ',', '.'),
+            $p->getStock(),
             $p->getDescription() ?? 'Geen omschrijving'
         ), $products);
     }

@@ -23,7 +23,7 @@ class AppFixtures extends Fixture
             $product->setName($dealData['name'] . ' #' . $i);
             $product->setPrice($dealData['price'] + rand(0, 10));
             $product->setDescription($dealData['desc']);
-            
+            $product->setStock(rand(0, 100));            
             $manager->persist($product);
         }
 

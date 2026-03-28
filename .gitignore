@@ -1,0 +1,15 @@
+# macOS systeem bestanden
+.DS_Store
+*/.DS_Store
+
+# Lokale scripts
+demo.sh
+
+# Symfony specifieke zaken (voor de zekerheid)
+/api/var/
+/api/vendor/
+/api/.env.local
+
+# Frontend specifieke zaken
+/app/node_modules/
+/app/dist/

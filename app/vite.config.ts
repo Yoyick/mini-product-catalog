@@ -5,11 +5,9 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     proxy: {
-      '/api': {
-        target: 'http://localhost:8000',
-        changeOrigin: true,
-        secure: false,
-      },
+      '/api': 'http://localhost:8000'
     },
-  },
+    // Voeg ngrok host toe
+    allowedHosts: ['.ngrok-free.dev']
+  }
 })

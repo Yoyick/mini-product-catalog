@@ -14,12 +14,13 @@ class ProductController extends AbstractController
     #[Route('/api/products', name: 'api_products', methods: ['GET'])]
     public function index(Request $request, ProductService $productService): JsonResponse
     {
-        // Query param ophalen: ?minPrice=10
+        // Query params ophalen
         $minPrice = (float) $request->query->get('minPrice', 0);
+        $minStock = (int) $request->query->get('minStock', 0);
+        $search = (string) $request->query->get('search', '');
         
-        $products = $productService->getAllProducts($minPrice);
+        $products = $productService->getAllProducts($minPrice, $minStock, $search);
 
-        return $this->json($products); 
-
+        return $this->json($products);
     }
 }
